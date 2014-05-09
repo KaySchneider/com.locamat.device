@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.locamat.magic"
+        version="2.2.0">
+
+    <name>AuthenticationPlugin</name>
+    <author>Kay Schneider kay@locamat.de</author>
+
+    <description>
+        This plugin allows your application to receive push notifications on Android, iOS and WP8 devices.
+        Android uses Google Cloud Messaging.
+        iOS uses Apple APNS Notifications.
+        WP8 uses Microsoft MPNS Notifications.
+    </description>
+
+    <license>MIT</license>
+
+    <js-module src="www/magicAuth.js" name="magicAuth">
+        <clobbers target="magicAuth" />
+    </js-module>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <!-- android -->
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="GetMacAdress" >
+                <param name="android-package" value="com.locamat.device.GetMacAdress"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+        </config-file>
+        <source-file src="src/android/com/plugin/GetMacAdress.java" target-dir="src/com/locamat/device/" />
+    </platform>
+
+
+
+</plugin>
