@@ -16,8 +16,8 @@
 
     <license>MIT</license>
 
-    <js-module src="www/locamat.device.mac.js" name="locamat.device.mac">
-        <clobbers target="locamat.device.mac" />
+    <js-module src="www/locamat.device.mac.js" name="GetMacAdress">
+        <clobbers target="GetMacAdress" />
     </js-module>
 
     <engines>

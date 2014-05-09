@@ -1,13 +1,19 @@
-if(typeof (locamat) == "undefined") {
-    var locamat = {};
-        locamat.device = {};
-} else if( typeof(locamat.device) == "undefined") {
-    locamat.device = {};
-}
-locamat.device.mac ={
-    getMac: function(successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "PushPlugin", "register");
-    }
+var locamatDeviceMac = function() {
+
+};
+
+locamatDeviceMac.prototype.getMac = function (successCallback, errorCallback) {
+    cordova.exec(successCallback, errorCallback, "GetMacAdress", "getmac", []);
 };
 
 
+if(!window.plugins) {
+    window.plugins = {};
+}
+if (!window.plugins.locamat) {
+    window.plugins.locamat = new locamatDeviceMac();
+}
+
+if (module.exports) {
+    module.exports = locamatDeviceMac;
+}
