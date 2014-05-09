@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="com.locamat.magic"
+        id="com.locamat.device"
         version="2.2.0">
 
     <name>AuthenticationPlugin</name>
@@ -16,8 +16,8 @@
 
     <license>MIT</license>
 
-    <js-module src="www/locamat.device.mac.js" name="magicAuth">
-        <clobbers target="magicAuth" />
+    <js-module src="www/locamat.device.mac.js" name="locamat.device.mac">
+        <clobbers target="locamat.device.mac" />
     </js-module>
 
     <engines>
@@ -35,7 +35,7 @@
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
         </config-file>
-        <source-file src="src/android/com/plugin/GetMacAdress.java" target-dir="src/com/locamat/device/" />
+        <source-file src="src/android/plugin/GetMacAdress.java" target-dir="src/com/locamat/device/" />
     </platform>
 
 
