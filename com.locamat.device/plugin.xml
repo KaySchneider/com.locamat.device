@@ -16,7 +16,7 @@
 
     <license>MIT</license>
 
-    <js-module src="www/magicAuth.js" name="magicAuth">
+    <js-module src="www/locamat.device.mac.js" name="magicAuth">
         <clobbers target="magicAuth" />
     </js-module>
 
