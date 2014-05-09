@@ -35,7 +35,7 @@
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
         </config-file>
-        <source-file src="src/android/plugin/GetMacAdress.java" target-dir="src/com/locamat/device/" />
+        <source-file src="src/android/GetMacAdress.java" target-dir="src/com/locamat/device/" />
     </platform>
 
 
