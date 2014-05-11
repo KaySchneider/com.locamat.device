@@ -2,7 +2,7 @@ com.locamat.device
 ==================
 
 Cordova Plugin for Android to read the Mac Adress of the device
-and to login an given user with oauth via googla account as described
+and to login an given user with oauth via google account as described
 in this blogpost:
 
 https://android-developers.blogspot.de/2013/01/verifying-back-end-calls-from-android.html
